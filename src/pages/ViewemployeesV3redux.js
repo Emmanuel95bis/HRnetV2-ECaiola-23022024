@@ -1,7 +1,8 @@
 import { Header } from "../components/header/header";
 import { Footer } from "../components/footer/footer";
-import { Table } from "../components/table/Table";
-//import Table from "table-npm-library";
+//import { Table } from "../components/table/Table";
+
+//let Table=require('create-table-npm-library-v2');
 
 //import { employees } from "../datas/Employees";
 import { Input } from "../components/input/Input";
@@ -14,6 +15,8 @@ import { useSelector } from "react-redux";
 import { useState, useEffect } from "react";
 
 import "./Viewemployees.scss";
+//const Requirements = require("create npm library V3");
+import { Requirements } from "react-table-npm-library-v4";
 
 export function Viewemployees() {
   const [search, setSearch] = useState("");
@@ -120,7 +123,7 @@ export function Viewemployees() {
             />
           </div>
         </div>
-        <Table
+        <Requirements
           header={[
             <span className="tableHeader">
               First Name{" "}
