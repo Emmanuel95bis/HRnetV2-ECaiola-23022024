@@ -1,3 +1,4 @@
+import "../components/table/style.css";
 import { Header } from "../components/header/header";
 import { Footer } from "../components/footer/footer";
 //import { Table } from "../components/table/Table";
@@ -16,7 +17,7 @@ import { useState, useEffect } from "react";
 
 import "./Viewemployees.scss";
 //const Requirements = require("create npm library V3");
-import { Requirements } from "react-table-npm-library-v4";
+import { Requirements } from "react-table-npm-library-v6";
 
 export function Viewemployees() {
   const [search, setSearch] = useState("");

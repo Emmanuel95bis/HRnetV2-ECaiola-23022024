@@ -8191,6 +8191,13 @@ react-table-npm-library-v4@^1.0.0:
   dependencies:
     "@babel/runtime" "^7.23.9"
 
+react-table-npm-library-v6@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.npmjs.org/react-table-npm-library-v6/-/react-table-npm-library-v6-1.0.0.tgz"
+  integrity sha512-DePDQw2CxZwzAkNy1+dPcdTHS4CEbNKs4GVlpfOiqUbTZ8sapVeEL4fpyWA2fl0ddCuJiWS4mcwrMbk3Y3DWmw==
+  dependencies:
+    "@babel/runtime" "^7.23.9"
+
 react-toastify@^9.1.3:
   version "9.1.3"
   resolved "https://registry.npmjs.org/react-toastify/-/react-toastify-9.1.3.tgz"
