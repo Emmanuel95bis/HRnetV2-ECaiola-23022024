@@ -10,7 +10,7 @@ import { Input } from "../components/input/Input";
 import { Select } from "../components/select/Select";
 import { FaCaretUp, FaCaretDown } from "react-icons/fa";
 //import { setEmployees} from "../localstorage/Localstorage";
-import { getEmployees } from "../localstorage/Localstorage";
+
 import { useSelector } from "react-redux";
 
 import { useState, useEffect } from "react";
