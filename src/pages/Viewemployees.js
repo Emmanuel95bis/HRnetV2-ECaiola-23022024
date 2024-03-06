@@ -1,24 +1,18 @@
+import "../components/table/style.css";
 import { Header } from "../components/header/header";
 import { Footer } from "../components/footer/footer";
-import { Table } from "../components/table/Table";
-//import { employees } from "../datas/Employees";
+
 import { Input } from "../components/input/Input";
 import { Select } from "../components/select/Select";
 import { FaCaretUp, FaCaretDown } from "react-icons/fa";
-//import { setEmployees} from "../localstorage/Localstorage";
-import { getEmployees } from "../localstorage/Localstorage";
+
+import { useSelector } from "react-redux";
 
 import { useState, useEffect } from "react";
 
 import "./Viewemployees.scss";
 
-let retrievedEmployees = getEmployees();
-
-console.log("000000000000");
-retrievedEmployees.forEach((element, index) => {
-  console.log("111111111111");
-  console.log(`Employee ${index + 1}:`, element);
-});
+import { Requirements } from "react-table-npm-library-v6";
 
 export function Viewemployees() {
   const [search, setSearch] = useState("");
@@ -38,9 +32,7 @@ export function Viewemployees() {
     return filteredEmployees;
   }
 
-  useEffect(() => {
-    retrievedEmployees = getEmployees();
-  }, []);
+  let retrievedEmployees = useSelector((state) => state.employees.isEmployee);
 
   const displayedEmployees =
     displayedEntries.length !== 0
@@ -48,9 +40,6 @@ export function Viewemployees() {
       : search === ""
       ? retrievedEmployees
       : filter(retrievedEmployees);
-
-  console.log("search" + search);
-  console.log(displayedEmployees);
 
   const displayedEmployeesLength = displayedEmployees.length;
 
@@ -130,7 +119,7 @@ export function Viewemployees() {
             />
           </div>
         </div>
-        <Table
+        <Requirements
           header={[
             <span className="tableHeader">
               First Name{" "}
